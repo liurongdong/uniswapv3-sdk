@@ -111,14 +111,14 @@ func NextInitializedTickWithinOneWord(ticks []Tick, tick int, lte bool, tickSpac
 
 // utils
 
-func isTicksSorted(ticks []Tick) bool {
-	for i := 0; i < len(ticks)-1; i++ {
-		if ticks[i].Index > ticks[i+1].Index {
-			return false
-		}
-	}
-	return true
-}
+//func isTicksSorted(ticks []Tick) bool {
+//	for i := 0; i < len(ticks)-1; i++ {
+//		if ticks[i].Index > ticks[i+1].Index {
+//			return false
+//		}
+//	}
+//	return true
+//}
 
 /**
  * Finds the largest tick in the list of ticks that is less than or equal to tick
