@@ -9,7 +9,7 @@ import (
 var (
 	ErrZeroTickSpacing    = errors.New("tick spacing must be greater than 0")
 	ErrInvalidTickSpacing = errors.New("invalid tick spacing")
-	ErrZeroNet            = errors.New("tick net delta must be zero")
+// 	ErrZeroNet            = errors.New("tick net delta must be zero")
 	ErrSorted             = errors.New("ticks must be sorted")
 )
 
@@ -26,13 +26,13 @@ func ValidateList(ticks []Tick, tickSpacing int) error {
 	}
 
 	// ensure tick liquidity deltas sum to 0
-	sum := big.NewInt(0)
-	for _, tick := range ticks {
-		sum.Add(sum, tick.LiquidityNet)
-	}
-	if sum.Cmp(big.NewInt(0)) != 0 {
-		return ErrZeroNet
-	}
+// 	sum := big.NewInt(0)
+// 	for _, tick := range ticks {
+// 		sum.Add(sum, tick.LiquidityNet)
+// 	}
+// 	if sum.Cmp(big.NewInt(0)) != 0 {
+// 		return ErrZeroNet
+// 	}
 
 	if !isTicksSorted(ticks) {
 		return ErrSorted
