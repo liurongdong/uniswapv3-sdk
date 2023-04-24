@@ -34,9 +34,9 @@ func ValidateList(ticks []Tick, tickSpacing int) error {
 	// 		return ErrZeroNet
 	// 	}
 
-	if !isTicksSorted(ticks) {
-		return ErrSorted
-	}
+	//if !isTicksSorted(ticks) {
+	//	return ErrSorted
+	//}
 
 	return nil
 }
